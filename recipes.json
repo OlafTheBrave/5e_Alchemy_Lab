@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Potion of Fire Breath",
+        "ingredients": ["Mandrake Root", "Dragon Scale"],
+        "time": 7,
+        "temp": 8,
+        "catalyst": "Phoenix Feather",
+        "effect": "Grants temporary fire breath"
+    }
+]
