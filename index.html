@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5e Alchemy Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>5e Alchemy Lab</h1>
+        <p>Create, mix, and discover magical potions!</p>
+    </header>
+    <main>
+        <!-- Ingredient Selection -->
+        <section id="ingredient-section">
+            <h2>Select Ingredients</h2>
+            <div id="ingredient-list"></div>
+        </section>
+        
+        <!-- Brewing Controls -->
+        <section id="brew-section">
+            <h2>Brewing Controls</h2>
+            <label>Time: <input type="range" min="1" max="10" value="5" id="brew-time"></label>
+            <label>Temperature: <input type="range" min="1" max="10" value="5" id="brew-temp"></label>
+            <label>Catalyst:
+                <select id="brew-catalyst"></select>
+            </label>
+            <button id="brew-button">Brew!</button>
+        </section>
+        
+        <!-- Result Display -->
+        <section id="result-section">
+            <h2>Result</h2>
+            <div id="brew-result"></div>
+        </section>
+        
+        <!-- Recipe Book -->
+        <section id="recipe-section">
+            <h2>Recipe Book</h2>
+            <button id="show-recipe-editor">Add New Recipe</button>
+            <ul id="recipe-list"></ul>
+        </section>
+        
+        <!-- Recipe Editor -->
+        <section id="editor-section" style="display:none;">
+            <h2>Add/Edit Recipe</h2>
+            <form id="recipe-editor-form">
+                <input type="hidden" id="edit-index">
+                <label>Recipe Name: <input type="text" id="recipe-name" required></label>
+                <label>Ingredients (comma separated): <input type="text" id="recipe-ingredients" required></label>
+                <label>Brewing Time: <input type="number" id="recipe-time" min="1" max="10" required></label>
+                <label>Temperature: <input type="number" id="recipe-temp" min="1" max="10" required></label>
+                <label>Catalyst: <input type="text" id="recipe-catalyst" required></label>
+                <label>Effect: <input type="text" id="recipe-effect" required></label>
+                <button type="submit">Save Recipe</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
