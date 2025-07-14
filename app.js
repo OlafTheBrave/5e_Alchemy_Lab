@@ -14,7 +14,7 @@ let recipes = [];
 window.onload = async function() {
     ingredients = await loadJSON('ingredients.json');
     recipes = await loadJSON('recipes.json');
-    catalysts = ingredients.filter(i => i.type !== 'herb'); // Example: any non-herb can be a catalyst
+    catalysts = ingredients.filter(i => i.type == 'catalyst'); // Example: any non-herb can be a catalyst
 
     renderIngredients();
     renderCatalystOptions();
